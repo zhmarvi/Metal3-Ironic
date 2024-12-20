@@ -72,7 +72,7 @@ resource "local_file" "file" {
 
 resource "kubernetes_secret" "user-data-secret" {
   metadata {
-    name = <USER_DATA_SECRET>"
+    name = "<USER_DATA_SECRET>"
     namespace = "<METAL3_CLUSTER_NAMESPACE>"
   }
   type = "generic"
