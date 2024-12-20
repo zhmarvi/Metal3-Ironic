@@ -1,5 +1,6 @@
 # Deploy image Server
 
+MANIFEST
 ```
 apiVersion: apps/v1
 kind: Deployment
