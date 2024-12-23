@@ -17,8 +17,9 @@ Install ClusterAPI (CAPI) CLI: ClusterAPI has its own command-line interface (cl
 Download the latest release from GitHub:
 
 ```
-curl -L https://github.com/kubernetes-sigs/cluster-api/releases/download/v0.5.9/clusterctl-linux-amd64 -o /usr/local/bin/clusterctl
+curl -L https://github.com/kubernetes-sigs/cluster-api/releases/download/v1.8.5/clusterctl-linux-amd64 -o /usr/local/bin/clusterctl
 chmod +x /usr/local/bin/clusterctl
+
 ```
 
 Verify installation:
