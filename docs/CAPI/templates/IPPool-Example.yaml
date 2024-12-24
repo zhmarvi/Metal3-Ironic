@@ -1,0 +1,13 @@
+apiVersion: ipam.metal3.io/v1alpha1
+kind: IPPool
+metadata:
+  name: <IP_POOL_NAME>
+  namespace: <CLUSTER_NAMESPACE>
+spec:
+  clusterName: <CLUSTER_NAME>
+  gateway: 172.22.0.1
+  namePrefix: <cluster_name>-bmv5
+  pools:
+  - end: 172.22.0.130
+    start: 172.22.0.121
+  prefix: 22
