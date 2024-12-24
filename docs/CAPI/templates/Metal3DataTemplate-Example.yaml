@@ -1,0 +1,41 @@
+apiVersion: infrastructure.cluster.x-k8s.io/v1beta1
+kind: Metal3DataTemplate
+metadata:
+  name: <METAL3_MACHINE_DATA_TEMPLATE_NAME>
+  namespace: <CLUSTER_NAMESPACE>
+spec:
+  clusterName: <CLUSTER_NAME>
+  metaData:
+    ipAddressesFromIPPool:
+    - key: provisioningIP
+      name: <IP_POOL_NAME>
+    objectNames:
+      - key: name
+        object: machine
+      - key: local-hostname
+        object: machine
+      - key: local_hostname
+        object: machine
+    prefixesFromIPPool:
+    - key: provisioningCIDR
+      name: <IP_POOL_NAME>
+  networkData:
+    links:
+      ethernets:
+      - id: eno1
+        macAddress:
+          fromHostInterface: eno1
+        type: phy
+    networks:
+      ipv4:
+      - id: eno1
+        ipAddressFromIPPool: <IP_POOL_NAME>
+        link: eno1
+        routes:
+        - gateway:
+            fromIPPool: <IP_POOL_NAME>
+          network: 0.0.0.0
+          prefix: 0
+    services:
+      dns:
+      - 8.8.8.8
