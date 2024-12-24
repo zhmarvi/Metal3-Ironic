@@ -14,8 +14,8 @@ spec:
   controlPlaneRef:
     apiVersion: controlplane.cluster.x-k8s.io/v1alpha1
     kind: RKE2ControlPlane
-    name: <CLUSTER_CONTROLPLANE_REFERENCE_NAME>
+    name: <CLUSTER_RKE2_CONTROLPLANE_NAME>
   infrastructureRef:
     apiVersion: infrastructure.cluster.x-k8s.io/v1beta1
     kind: Metal3Cluster
-    name: <METAL3_CLUSTER_NAME_REFERENCE>
+    name: <METAL3_CLUSTER_NAME>
