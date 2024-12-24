@@ -1,0 +1,18 @@
+apiVersion: controlplane.cluster.x-k8s.io/v1alpha1
+kind: RKE2ControlPlane
+metadata:
+  name: <CLUSTER_RKE2_CONTROLPLANE_NAME>
+  namespace: <CLUSTER_NAMESPACE>
+spec:
+  infrastructureRef:
+    apiVersion: infrastructure.cluster.x-k8s.io/v1beta1
+    kind: Metal3MachineTemplate
+    name: <METAL3_MACHINE_TEMPLATE_NAME>
+  replicas: 1 # Scale to 3 for HA
+  agentConfig:
+    kubelet:
+      extraArgs:
+        - provider-id=metal3://{{ ds.meta_data.uuid }}
+    nodeName: '{{ ds.meta_data.local_hostname }}'
+    format: cloud-config
+    version: 1.28.13+rke2r1 # RKE2 Version Example
