@@ -1,0 +1,18 @@
+apiVersion: infrastructure.cluster.x-k8s.io/v1beta1
+kind: Metal3MachineTemplate
+metadata:
+  name: <METAL3_MACHINE_TEMPLATE_NAME>
+  namespace: <CLUSTER_NAMESPACE>
+spec:
+  template:
+    spec:
+      dataTemplate:
+        name: <METAL3_MACHINE_DATA_TEMPLATE_NAME>
+      hostSelector:
+        matchLabels:
+          cluster-role: control-plane
+      image:
+        checksum: http://<IMAGE_SERVER_IP>:8080/SHA256SUMS
+        checksumType: sha256
+        format: raw
+        url: http://<IMAGE_SERVER_IP>:8080/<RAW_IMAGE>
