@@ -4,7 +4,8 @@ Metal³ provides components for BareMetal host management with Kubernetes. You c
 
 This is paired with one of the components from the OpenStack ecosystem, Ironic for booting and installing machines. Metal³ handles the installation of Ironic as a standalone component​
 
-​
+## MAIN UPSTREAM DOCUMENTATION: 
+https://book.metal3.io/​
 
 ## Metal3 abilities and components:​
 
