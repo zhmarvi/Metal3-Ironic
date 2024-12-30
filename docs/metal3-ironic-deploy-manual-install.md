@@ -1,5 +1,9 @@
 # Deploy Ironic container for metal3
 
+## NOTE: This is the process for manual installation using kustomize to deploy metal3-ironic. please use the other Metal3-Helm doc for helm based deploy from SUSE edge.
+
+## DOCUMENTATION LINK: https://book.metal3.io/quick-start
+
 We will be using kustomize for this process
 
 ```
