@@ -5,7 +5,7 @@ Upstream Metal3 Documentation: https://book.metal3.io/quick-start#image-server
 
 ## INSTALL
 ```
-cd <image_server_deployment_directory>
+cd <path>/Metal3-Ironic/docs/image-server
 kubectl apply -k .
 ```
 ## POST INSTALL
