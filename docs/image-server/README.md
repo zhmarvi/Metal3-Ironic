@@ -37,6 +37,7 @@ qemu-img convert -f qcow2 -O raw image.qcow2 image.raw
 grab the sha256sum, example
 ```
 sha256sum jammy-server-cloudimg-amd64.img
+0d8345a343c2547e55ac815342e6cb4a593aa5556872651eb47e6856a2bb0cdd  jammy-server-cloudimg-amd64.img
 ```
 
 ### PUSH IMAGE TO NGINX CONTAINER from local directory (using kubectl cp)
