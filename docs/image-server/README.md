@@ -10,9 +10,25 @@ kubectl apply -k .
 ```
 ## POST INSTALL
 
-Once provisioned you will be able to see the image server has a LoadBalancer Resource which can be CURL'd pulled from
+Once provisioned you will be able to see the image server has a LoadBalancer Resource as the main endpoint.
 
-### UPLOAD AN IMAGE from a local (using kubectl cp)
+## UPLOAD IMAGES
+NOTE: This can be done i other ways, that are probably more efficient but this will be a base example
+
+Create a image directory
+```
+mkdir disk-images
+```
+
+```
+wget https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img
+wget https://cloud-images.ubuntu.com/jammy/current/SHA256SUMS
+sha256sum --ignore-missing -c SHA256SUMS
+```
+NOTE: FOR RAW IMAGES YOU WILL NEED TO CONVERT A QCOW2 OR PULL A CUSTOM IMAGE AND THEN GET THE 256SHA and add it to the SHA256SUMS file
+
+
+### PUSH IMAGE TO NGINX CONTAINER from local directory (using kubectl cp)
 ```
 kubectl cp -n <namespace> <source path to image> <pod_name>:/usr/share/nginx/html/
 ```
