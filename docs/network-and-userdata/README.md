@@ -1,6 +1,9 @@
 # Network and User-Data
 
-## Create a NetworkData Secret within the Cluster namespace​
+## Cloud-Init Docuementation: 
+https://cloudinit.readthedocs.io/en/latest/explanation/format.html#cloud-config-data
+
+### Create a NetworkData Secret within the Cluster namespace​
 
 Example of Creating a network-data-secret: 
 ```
