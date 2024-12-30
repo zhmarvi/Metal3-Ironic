@@ -27,5 +27,4 @@ https://book.metal3.io/​
 - Deploy and setup a Disk-image Server​
 
 #### Installation Steps:​
-- Deploy Metal3 Ironic​
-- Install BareMetal Operator​
+- Deploy Metal3 Ironic​ (via Helm)
