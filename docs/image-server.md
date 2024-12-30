@@ -47,7 +47,7 @@ spec:
       volumes:
         - name: data
           persistentVolumeClaim:
-            claimName: data-claim
+            claimName: image-server-claim
       restartPolicy: Always
 
 ---
@@ -73,11 +73,11 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: data-claim
+  name: image-server-claim
   labels:
-    app: data-claim
+    app: image-server
 spec:
-  storageClassName: "<STORAGE_CLASS>"
+  #storageClassName: "<STORAGE_CLASS>"
   accessModes:
   - ReadWriteOnce
   resources:
