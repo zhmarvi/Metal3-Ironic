@@ -28,6 +28,16 @@ sha256sum --ignore-missing -c SHA256SUMS
 ```
 NOTE: FOR RAW IMAGES YOU WILL NEED TO CONVERT A QCOW2 OR PULL A CUSTOM IMAGE AND THEN GET THE 256SHA and add it to the SHA256SUMS file
 
+DOC on Converstion: https://docs.openstack.org/image-guide/convert-images.html
+
+EXAMPLE:
+```
+qemu-img convert -f qcow2 -O raw image.qcow2 image.raw
+```
+grab the sha256sum, example
+```
+sha256sum jammy-server-cloudimg-amd64.img
+```
 
 ### PUSH IMAGE TO NGINX CONTAINER from local directory (using kubectl cp)
 ```
