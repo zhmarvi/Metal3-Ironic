@@ -1,0 +1,51 @@
+#Bonding Network Data Example
+
+{
+  "links": [
+    {
+      "id": "<NIC1_INTERFACE>",
+      "type": "phy",
+      "ethernet_mac_address": "<NIC1_MAC_ADDRESS>",
+      "mtu": 1500
+    },
+    {
+      "id": "<NIC2_INTERFACE>",
+      "type": "phy",
+      "ethernet_mac_address": "<NIC2_MAC_ADDRESS>",
+      "mtu": 1500
+    },
+    {
+      "id": "bond0",
+      "type": "bond",
+      "bond_links": [
+          "<NIC1>",
+          "<NIC2>"
+      ],
+      "bond_mode": "active-backup",
+      "miimon": "100"
+    }
+  ],
+  "networks": [
+    {
+      "id": "network0",
+      "network_id": "extnet",
+      "link": "bond0",
+      "type": "ipv4",
+      "ip_address": "<IPADDRESS>",
+      "netmask": "<NETMASK>",
+      "routes": [
+         {
+          "network": "0.0.0.0",
+	  "gateway": "<GATEWAY>",
+	  "netmask": "0.0.0.0"
+	 }
+      ]
+    }
+  ],
+  "services": [
+    {
+      "type": "dns",
+      "address": "<DNS_ADDRESS>"
+    }
+  ]
+}
