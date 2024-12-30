@@ -21,6 +21,7 @@ mkdir disk-images
 ```
 
 ```
+pushd disk-images
 wget https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img
 wget https://cloud-images.ubuntu.com/jammy/current/SHA256SUMS
 sha256sum --ignore-missing -c SHA256SUMS
