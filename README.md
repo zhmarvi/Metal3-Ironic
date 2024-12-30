@@ -22,9 +22,10 @@ https://book.metal3.io/​
 - Deploy Supplementary Resources on Management Cluster​
 - Deploy Metal3 Resources
 
+### Installation
 #### Preliminary Steps:​
-- Deploy a DHCP Server pod​
-- Deploy and setup a Disk-image Server​
+- Deploy a DHCP Server pod​ LINK: https://github.com/zhmarvi/Metal3-Ironic/blob/main/docs/DHCP-Server_Deploy.md
+- Deploy and setup a Disk-image Server​ LINK: https://github.com/zhmarvi/Metal3-Ironic/tree/main/docs/image-server
 
 #### Installation Steps:​
-- Deploy Metal3 Ironic​ (via Helm)
+- Deploy Metal3 Ironic​ (via Helm) LINK: https://github.com/zhmarvi/Metal3-Ironic/blob/main/docs/Metal3-Helm.md
